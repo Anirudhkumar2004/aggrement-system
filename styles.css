@@ -1,0 +1,195 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header and Titles */
+h1, h2 {
+    color: #ff523b;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Navbar */
+nav {
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav button1 {
+    --clr: #39ff14;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    color: #fff;
+    background: var(--clr);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+nav button1 span {
+    position: relative;
+    z-index: 1;
+}
+
+nav button1 i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 0;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+nav button1:hover i {
+    transform: scale(1);
+}
+
+nav button1:hover {
+    transform: translateY(-2px);
+}
+
+/* Main Container for Forms */
+.container {
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #ff523b;
+    box-shadow: 0 0 5px rgba(255, 82, 59, 0.5);
+    outline: none;
+}
+
+/* Textarea */
+form textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Terms Section */
+#terms {
+    background: #f9f9f9;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #555;
+    font-style: italic;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    background-color: #ff523b;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e94527;
+    transform: translateY(-3px);
+}
+
+/* Signature Upload */
+form input[type="file"] {
+    border: 1px dashed #ddd;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Welcome Section */
+.welcome {
+    font-size: 1.2em;
+    margin: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.welcome a {
+    color: #ff523b;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.welcome a:hover {
+    color: #e94527;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+}
